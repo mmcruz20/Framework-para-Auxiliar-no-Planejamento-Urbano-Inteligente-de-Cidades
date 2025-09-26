@@ -1,0 +1,1 @@
+Esse repositório é utilizado para consolidar os artefatos que compõe o framework para auxiliar os gestores públicos no planejamento urbano inteligente das cidades. Foi criado para auxiliar no desenvolvimento da tese.
