@@ -1,0 +1,51 @@
+### **Diagrama de Casos de Uso UML**
+
+| **Ator**                        | **Caso de Uso**                                        | **Descrição** |
+|----------------------------------|--------------------------------------------------------|--------------|
+| **Membro da Equipe de Planejamento**  | Acessar Sistema | O usuário faz login e acessa o sistema. |
+| **Cidadão**                      | Acessar Sistema | O usuário (cidadão) acessa o sistema. |
+| **Membro da Equipe de Planejamento**  | Comparar Documentos de Planejamento | Seleciona um ou mais documentos existentes e compara com padrões estabelecidos. |
+| **Cidadão**                      | Comparar Documentos de Planejamento | Seleciona um ou mais documentos existentes e compara com padrões estabelecidos. |
+| **Membro da Equipe de Planejamento**  | Selecionar Documentos para Comparação | Define quais documentos deseja comparar, escolhendo entre os documentos já cadastrados no sistema. |
+| **Cidadão**                      | Selecionar Documentos para Comparação | Define quais documentos deseja comparar, escolhendo entre os documentos já cadastrados no sistema. |
+| **Sistema**                      | Calcular Percentual de Similaridade | O sistema compara os documentos selecionados com os padrões e retorna um percentual de similaridade. |
+| **Sistema**                      | Gerar Relatórios e Gráficos | Gera gráficos e tabelas mostrando os resultados das comparações. |
+| **Membro da Equipe de Planejamento**  | Exportar Relatório | Exporta gráficos e tabelas em formatos XLSX e PDF. |
+| **Cidadão**                      | Exportar Relatório | Exporta gráficos e tabelas em formatos XLSX e PDF. |
+
+---
+
+### **Descrição do Cenário**
+O sistema tem duas funções principais:
+1. **Permitir a criação de artefatos de planejamento** por membros da equipe da Prefeitura.
+2. **Permitir que gestores e cidadãos comparem esses documentos com padrões de boas práticas**, verificando a conformidade da cidade na construção desses documentos.
+
+Os usuários poderão acessar o sistema e selecionar os documentos de planejamento já cadastrados. O sistema permitirá a 
+seleção de um ou mais documentos para comparação com estruturas padrão pré-definidas. 
+Como resultado, o sistema calculará um percentual de similaridade para cada documento 
+comparado e um percentual geral de conformidade da cidade.
+
+Os resultados poderão ser apresentados em gráficos e tabelas, com a possibilidade de 
+exportação para XLSX e PDF.
+
+---
+
+### **Resumo das Atividades Prioritárias**
+
+#### **Para o Especialista em Layout de Telas**
+1. Criar **tela de login** para acesso ao sistema.
+2. Desenvolver **tela de seleção de documentos** para comparação.
+3. Criar interface para **exibição dos resultados**, incluindo gráficos e tabelas.
+4. Desenvolver interface para **exportação dos relatórios** (botões para XLSX e PDF).
+5. Ajustar a navegação entre telas para facilitar a experiência do usuário.
+
+#### **Para o Programador**
+1. Implementar **mecanismo de autenticação de usuários** (Membro da Equipe de Planejamento e Cidadão).
+2. Criar funcionalidade para **armazenamento e recuperação de documentos cadastrados**.
+3. Desenvolver **algoritmo de comparação de documentos** para calcular o percentual de similaridade.
+4. Criar **módulo de geração de gráficos e tabelas** com os resultados das comparações.
+5. Implementar **exportação de relatórios** em XLSX e PDF.
+
+---
+
+Esse modelo facilita a organização das tarefas para cada profissional, garantindo um fluxo de trabalho eficiente.

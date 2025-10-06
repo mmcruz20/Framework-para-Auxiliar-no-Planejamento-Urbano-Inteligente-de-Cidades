@@ -1,0 +1,54 @@
+### **Diagrama de Casos de Uso UML**
+
+| **Ator**                        | **Caso de Uso**                                        | **Descrição** |
+|----------------------------------|--------------------------------------------------------|--------------|
+| **Membro da Equipe de Planejamento**  | Acessar Sistema | O usuário faz login e acessa o sistema. |
+| **Membro da Equipe de Planejamento**  | Criar ou Importar Documento de Planejamento | Permite a criação de documentos do zero ou a importação de documentos existentes. |
+| **Membro da Equipe de Planejamento**  | Definir Relações entre Documentos | O usuário define como as partes de um documento se relacionam com partes de outro. |
+| **Sistema**                      | Sugerir Modelo de Relacionamento | Sugere um modelo inicial de relacionamento com base em boas práticas e dados anteriores. |
+| **Membro da Equipe de Planejamento**  | Ajustar Relações entre Documentos | Modifica ou adiciona novas relações conforme necessário, utilizando opções simples como checkboxes. |
+| **Sistema**                      | Gerar Visualização das Relações | Apresenta uma tabela com os relacionamentos identificados entre documentos. |
+| **Membro da Equipe de Planejamento**  | Analisar Similaridade entre Documentos | O sistema compara a semelhança entre instâncias de partes de diferentes documentos. |
+| **Sistema**                      | Inferir Relacionamento entre Documentos | Baseado na análise de similaridade, determina a relação global entre documentos. |
+| **Sistema**                      | Gerar Relatórios de Relacionamento | Gera gráficos e tabelas com as análises de similaridade e inferências. |
+| **Membro da Equipe de Planejamento**  | Exportar Relatórios | Permite exportação das análises e relações identificadas em XLSX ou PDF. |
+
+---
+
+### **Descrição do Cenário**
+Este sistema permitirá que gestores municipais criem, importem e analisem documentos de planejamento. Além disso, permitirá avaliar se esses documentos estão alinhados entre si.
+
+Para isso, o usuário deverá primeiro definir os tipos de relacionamento entre partes de diferentes documentos. Exemplos de relações incluem:
+- **Os objetivos do Plano de Metas podem estar alinhados aos objetivos do PPA.**
+- **As estratégias do Planejamento Estratégico podem estar relacionadas com as estratégias do Plano Diretor.**
+
+O sistema inicialmente sugerirá um modelo de relacionamento baseado em padrões existentes, mas o usuário poderá definir relações específicas para sua cidade. Os relacionamentos serão representados visualmente em uma tabela.
+
+Após essa etapa, o sistema utilizará **análise semântica** para comparar as instâncias das partes de diferentes documentos e calcular um percentual de similaridade. Com base nessas comparações, o sistema inferirá automaticamente qual o tipo de relacionamento global entre documentos inteiros e calculará o percentual de alinhamento entre eles.
+
+Os resultados das análises serão apresentados em gráficos e tabelas e poderão ser exportados em **XLSX** ou **PDF**.
+
+---
+
+### **Resumo das Atividades Prioritárias**
+
+#### **Para o Especialista em Layout de Telas**
+1. Criar **tela de login** para acesso ao sistema.
+2. Criar **interface para criação e importação de documentos de planejamento**.
+3. Criar **tela para definição das relações entre partes de documentos**, permitindo seleção fácil por meio de checkboxes.
+4. Criar **visualização em formato de tabela** para exibição dos relacionamentos definidos.
+5. Criar **tela para exibição das análises de similaridade entre documentos**, com gráficos e tabelas interativas.
+6. Criar **interface para exportação dos relatórios de análise**, com opções de download em XLSX e PDF.
+
+#### **Para o Programador**
+1. Implementar **mecanismo de autenticação e controle de usuários**.
+2. Criar funcionalidade para **armazenamento e recuperação de documentos de planejamento**.
+3. Desenvolver **módulo de sugestão automática de relacionamentos**, baseado em modelos existentes.
+4. Criar **mecanismo de definição e ajuste de relacionamentos** entre partes dos documentos, utilizando checkboxes ou outra interface intuitiva.
+5. Desenvolver **algoritmo de análise semântica**, capaz de calcular a similaridade entre partes dos documentos.
+6. Criar **módulo de inferência automática**, que determine a relação global entre documentos com base nas comparações.
+7. Implementar **exportação dos relatórios de análise**, com suporte a gráficos e tabelas em XLSX e PDF.
+
+---
+
+Esse modelo divide claramente as tarefas entre design e desenvolvimento, facilitando a organização do trabalho. Caso precise de ajustes, me avise! 😊

@@ -1,0 +1,56 @@
+### **Diagrama de Casos de Uso UML**
+
+| **Ator**                        | **Caso de Uso**                                        | **Descrição** |
+|----------------------------------|--------------------------------------------------------|--------------|
+| **Membro da Equipe de Planejamento**  | Acessar Sistema | O usuário faz login e acessa o sistema. |
+| **Membro da Equipe de Planejamento**  | Criar Novo Plano de Planejamento | Define o tipo de plano (PPA, Plano Estratégico, etc.). |
+| **Membro da Equipe de Planejamento**  | Definir Período do Plano | Escolhe o período de validade do plano (exemplo: 2026-2029). |
+| **Membro da Equipe de Planejamento**  | Definir Estrutura do Plano | Informa quais seções o plano deverá conter. |
+| **Sistema**                      | Sugerir Estrutura do Plano | Sugere uma estrutura baseada em versões anteriores ou modelos pré-definidos. |
+| **Membro da Equipe de Planejamento**  | Alterar Estrutura do Plano | Modifica a estrutura proposta pelo sistema, utilizando drag-and-drop ou seleção. |
+| **Membro da Equipe de Planejamento**  | Instanciar Plano de Planejamento | Gera um plano a partir da estrutura definida. |
+| **Sistema**                      | Sugerir Instâncias das Partes do Plano | Baseia-se em documentos de curto, médio ou longo prazo daquela cidade ou de outras cidades para sugerir conteúdos para cada parte do plano. |
+| **Membro da Equipe de Planejamento**  | Avaliar e Ajustar Instâncias | Revê as sugestões do sistema e ajusta manualmente se necessário. |
+| **Membro da Equipe de Planejamento**  | Criar Instâncias do Plano Manualmente | Permite ignorar as sugestões do sistema e inserir os conteúdos manualmente. |
+
+---
+
+### **Descrição do Cenário**
+Este sistema tem como objetivo auxiliar os gestores municipais na criação de artefatos de planejamento, como PPA, Plano Estratégico e Plano de Metas. O usuário acessará o sistema via web e informará qual plano deseja criar e o período correspondente. 
+
+Após a definição do plano e do período, o usuário deverá estabelecer a estrutura do documento. O sistema irá sugerir uma estrutura inicial baseada em:
+- **Planos anteriores da mesma cidade**;
+- **Modelos pré-definidos armazenados no sistema**.
+
+Caso o usuário não concorde com a estrutura sugerida, ele poderá modificá-la utilizando funcionalidades interativas como **arrastar e soltar** ou seleção de opções. 
+
+Após a estrutura estar definida, o sistema permitirá a instanciação do plano. Durante esse processo, o sistema analisará documentos de curto, médio e longo prazo já cadastrados na cidade e sugerirá conteúdos para cada parte do plano. Caso não existam referências suficientes, poderá sugerir trechos de documentos de outras cidades.
+
+O usuário poderá:
+- **Aceitar as sugestões do sistema**;
+- **Modificar as instâncias sugeridas por meio de arrastar e soltar ou caixas de seleção**;
+- **Criar manualmente cada parte do documento**.
+
+Esse processo tornará a criação de documentos de planejamento mais eficiente e padronizada, facilitando a gestão municipal.
+
+---
+
+### **Resumo das Atividades Prioritárias**
+
+#### **Para o Especialista em Layout de Telas**
+1. Criar **tela de login** para acesso ao sistema.
+2. Criar **interface para criação de um novo plano**, incluindo seleção do tipo e do período.
+3. Criar **interface de definição da estrutura do plano**, permitindo edição e sugestões automáticas.
+4. Criar **tela de instanciação do plano**, onde o usuário poderá visualizar e modificar as partes do documento.
+5. Criar **interface de edição das instâncias sugeridas**, com funcionalidade de arrastar e soltar ou caixa de seleção para ajustes.
+
+#### **Para o Programador**
+1. Implementar **mecanismo de autenticação e controle de usuários**.
+2. Criar funcionalidade para **armazenamento e recuperação de planos de planejamento**.
+3. Desenvolver **algoritmo de sugestão de estrutura do plano**, baseado em versões anteriores e modelos pré-definidos.
+4. Criar **módulo de análise e sugestão de instâncias** com base em documentos da cidade ou de outras cidades.
+5. Implementar **interface interativa para ajustes manuais**, garantindo que o usuário possa modificar facilmente as sugestões do sistema.
+
+---
+
+Esse modelo divide claramente as tarefas entre design e desenvolvimento, facilitando a organização do trabalho. Caso precise de ajustes, me avise! 😊

@@ -1,0 +1,53 @@
+### **Diagrama de Casos de Uso UML**
+
+| **Ator**                        | **Caso de Uso**                                        | **Descrição** |
+|----------------------------------|--------------------------------------------------------|--------------|
+| **Membro da Equipe de Planejamento**  | Acessar Sistema | O usuário faz login e acessa o sistema. |
+| **Cidadão**                      | Acessar Sistema | O usuário (cidadão) acessa o sistema. |
+| **Membro da Equipe de Planejamento**  | Criar Documento de Planejamento | Permite a criação de documentos do zero. |
+| **Cidadão**                      | Criar Documento de Planejamento | Permite a criação de documentos do zero. |
+| **Membro da Equipe de Planejamento**  | Importar Documento PDF | Arrasta e solta documentos em PDF para importação. |
+| **Cidadão**                      | Importar Documento PDF | Arrasta e solta documentos em PDF para importação. |
+| **Sistema**                      | Identificar Metadados do Documento | Extrai automaticamente nome do artefato, período, cidade e estrutura do documento. |
+| **Membro da Equipe de Planejamento**  | Avaliar e Ajustar Metadados | Visualiza os dados extraídos e ajusta, se necessário, por meio de arrastar e soltar ou seleção. |
+| **Cidadão**                      | Avaliar e Ajustar Metadados | Visualiza os dados extraídos e ajusta, se necessário, por meio de arrastar e soltar ou seleção. |
+| **Sistema**                      | Salvar Documento Importado | Após confirmação do usuário, armazena os documentos importados para futura comparação. |
+| **Membro da Equipe de Planejamento**  | Exportar Dados | Permite exportação dos componentes do documento em XLSX, com opção de selecionar quais partes deseja exportar. |
+| **Cidadão**                      | Exportar Dados | Permite exportação dos componentes do documento em XLSX, com opção de selecionar quais partes deseja exportar. |
+
+---
+
+### **Descrição do Cenário**
+Este sistema permitirá que gestores e cidadãos possam criar e importar documentos de planejamento municipal. A importação será feita por meio de arquivos em PDF, que poderão ser arrastados e soltos na interface do sistema.
+
+O sistema utilizará inteligência artificial para identificar automaticamente as principais informações contidas nos documentos, incluindo:
+- **Nome do Artefato** (exemplo: PPA, Plano Estratégico, Plano de Metas);
+- **Período** (anos de validade do planejamento);
+- **Cidade** (município a que se refere o documento);
+- **Estrutura** (divisão ou composição do documento).
+
+Após a extração dos dados, o usuário terá a possibilidade de revisar e ajustar as informações utilizando um sistema interativo de arrastar e soltar ou por seleção direta. Após a confirmação, os documentos serão armazenados no banco de dados e estarão disponíveis para comparação futura. 
+
+Os documentos poderão ser exportados para XLSX, sendo possível escolher quais partes do documento devem ser incluídas na exportação.
+
+---
+
+### **Resumo das Atividades Prioritárias**
+
+#### **Para o Especialista em Layout de Telas**
+1. Criar **tela de login** para acesso ao sistema.
+2. Criar **interface para upload de documentos PDF**, permitindo arrastar e soltar arquivos.
+3. Criar **tela para exibição e ajuste dos metadados extraídos**, incluindo funcionalidades de edição por arrastar e soltar.
+4. Criar **tela de listagem dos documentos importados**, permitindo a visualização dos documentos armazenados.
+5. Criar **interface para exportação dos documentos** com opções de seleção dos componentes a serem exportados.
+
+#### **Para o Programador**
+1. Implementar **mecanismo de autenticação de usuários** (Membro da Equipe de Planejamento e Cidadão).
+2. Criar funcionalidade para **upload de arquivos PDF**, garantindo que o sistema possa processar documentos de forma eficiente.
+3. Desenvolver **módulo de extração automática de metadados**, utilizando processamento de texto para identificar nome do artefato, período, cidade e estrutura do documento.
+4. Criar **banco de dados para armazenar documentos importados** e seus respectivos metadados.
+5. Implementar **módulo de exportação para XLSX**, permitindo que os usuários selecionem quais partes do documento desejam exportar.
+
+---
+
+Esse modelo facilita a organização das tarefas para cada profissional, garantindo um fluxo de trabalho eficiente. Caso precise de ajustes, me avise! 😊

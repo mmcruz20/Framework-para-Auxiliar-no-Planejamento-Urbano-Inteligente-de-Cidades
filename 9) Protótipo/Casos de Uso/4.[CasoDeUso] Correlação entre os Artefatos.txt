@@ -1,0 +1,46 @@
+### **Diagrama de Casos de Uso UML**
+
+| **Ator**                        | **Caso de Uso**                                        | **Descrição** |
+|----------------------------------|--------------------------------------------------------|--------------|
+| **Membro da Equipe de Planejamento**  | Acessar Sistema | O usuário faz login e acessa o sistema. |
+| **Membro da Equipe de Planejamento**  | Criar ou Importar Documento de Planejamento | Permite a criação de documentos do zero ou a importação de documentos existentes. |
+| **Membro da Equipe de Planejamento**  | Definir Relações entre Documentos | O usuário define como as partes de um documento se relacionam com partes de outro. |
+| **Sistema**                      | Sugerir Modelo de Relacionamento | Sugere um modelo inicial de relacionamento com base em boas práticas e dados anteriores. |
+| **Membro da Equipe de Planejamento**  | Ajustar Relações entre Documentos | Modifica ou adiciona novas relações conforme necessário, utilizando opções simples como checkboxes. |
+| **Sistema**                      | Gerar Visualização das Relações | Apresenta uma tabela com os relacionamentos identificados entre documentos. |
+| **Membro da Equipe de Planejamento**  | Exportar Relações entre Documentos | Permite exportação dos relacionamentos em XLSX ou PDF. |
+
+---
+
+### **Descrição do Cenário**
+Este sistema permitirá que gestores municipais criem, importem e analisem documentos de planejamento. Além disso, o sistema possibilitará a definição e avaliação das relações entre diferentes documentos de planejamento para garantir que estejam alinhados.
+
+Os usuários poderão definir as possíveis relações entre cada parte ou componente de um documento com a parte de outro documento. Exemplos de relacionamentos incluem:
+- **Os objetivos do Plano de Metas podem estar alinhados aos objetivos do PPA.**
+- **As estratégias do Planejamento Estratégico podem estar relacionadas com as estratégias do Plano Diretor.**
+
+O sistema inicialmente sugerirá um modelo de relacionamento baseado em padrões existentes. No entanto, o usuário poderá personalizar essas relações de acordo com as necessidades da cidade. Para facilitar, os relacionamentos poderão ser estabelecidos de forma simples, como utilizando checkboxes para indicar quais elementos estão conectados e qual o tipo de relação existente.
+
+Após a definição dos relacionamentos, o sistema apresentará os dados em uma tabela visual, permitindo ao usuário compreender como os documentos de planejamento se interligam. A tabela poderá ser exportada em formatos **XLSX** ou **PDF**.
+
+---
+
+### **Resumo das Atividades Prioritárias**
+
+#### **Para o Especialista em Layout de Telas**
+1. Criar **tela de login** para acesso ao sistema.
+2. Criar **interface para criação e importação de documentos de planejamento**.
+3. Criar **tela para definição das relações entre documentos**, permitindo seleção fácil por meio de checkboxes.
+4. Criar **visualização em formato de tabela** para exibição dos relacionamentos definidos.
+5. Criar **interface para exportação da tabela de relações**, com opções de download em XLSX e PDF.
+
+#### **Para o Programador**
+1. Implementar **mecanismo de autenticação e controle de usuários**.
+2. Criar funcionalidade para **armazenamento e recuperação de documentos de planejamento**.
+3. Desenvolver **módulo de sugestão automática de relacionamentos**, baseado em modelos existentes.
+4. Criar **mecanismo de definição e ajuste de relacionamentos** entre partes dos documentos, utilizando checkboxes ou outra interface intuitiva.
+5. Implementar **exportação da tabela de relacionamentos** em XLSX e PDF.
+
+---
+
+Esse modelo divide claramente as tarefas entre design e desenvolvimento, facilitando a organização do trabalho. Caso precise de ajustes, me avise! 😊

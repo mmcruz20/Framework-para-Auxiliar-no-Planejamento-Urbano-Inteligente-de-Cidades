@@ -1,0 +1,67 @@
+@startuml
+
+class Cidade {
+  +nome: String
+  +população: Int
+  +área: Float
+  +região: String
+  +IDH: Float
+  +PIB: Float
+  +calcularCrescimentoPopulacional(): Float
+  +gerarRelatórioDemográfico(): String
+}
+
+class PlanoEstratégico {
+  +anoInicial: Int
+  +anoFinal: Int
+  +objetivoGeral: String
+  +visão: String
+  +missão: String
+  +orçamentoTotal: Float
+  +calcularPrazoPlanejamento(): Int
+  +alocarRecursos(): Boolean
+  +gerarRelatórioProgresso(): String
+}
+
+class ObjetivoEstratégico {
+  +descrição: String
+  +prioridade: String
+  +meta: String
+  +responsável: String
+  +calcularProgresso(): Float
+  +definirResponsável(): Boolean
+}
+
+class AçãoEstratégica {
+  +nome: String
+  +custo: Float
+  +prazo: Int
+  +responsável: String
+  +calcularCustoTotal(): Float
+  +monitorarExecução(): String
+}
+
+class Indicador {
+  +nome: String
+  +valorMeta: Float
+  +valorAtual: Float
+  +unidadeMedida: String
+  +calcularDesvioMeta(): Float
+  +gerarRelatórioIndicador(): String
+}
+
+class Stakeholder {
+  +nome: String
+  +tipo: String (Governo, Privado, Comunidade)
+  +nívelEngajamento: String
+  +avaliarParticipação(): Float
+  +definirEstratégiaEngajamento(): Boolean
+}
+
+Cidade "1..*" --> "1" PlanoEstratégico : Possui
+PlanoEstratégico "1..*" --> "1" ObjetivoEstratégico : Contém
+ObjetivoEstratégico "1..*" --> "1" AçãoEstratégica : Inclui
+AçãoEstratégica "1..*" --> "1" Indicador : Monitorado por
+PlanoEstratégico "0..*" --> "1" Stakeholder : Envolve
+
+@enduml
